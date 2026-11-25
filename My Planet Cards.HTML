@@ -1,0 +1,85 @@
+<!--You will build a Planet Cards page using a JavaScript class. The page has a button — Show Planets! — and three card areas. When you click the button, a showPlanets() function runs. It creates three Planet objects and fills each card with the planet name and a fun fact using innerHTML.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Planet Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Light background color */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            font-size: 3em; /* Large heading */
+            text-align: center;
+            margin-top: 20px;
+        }
+        .card {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Planet Cards</h1>
+    <button class="btn btn-primary" onclick="showPlanets()">Show Planets!</button>
+
+    <div class="card" id="planetCard1"></div>
+    <div class="card" id="planetCard2"></div>
+    <div class="card" id="planetCard3"></div>
+    <div class="card" id="planetCard4"></div>
+    <div class="card" id="planetCard5"></div>
+    <div class="card" id="planetCard6"></div>
+    <div class="card" id="planetCard7"></div>
+    <div class="card" id="planetCard8"></div>
+    <div class="card" id="planetCard9"></div>
+    <div class="card" id="planetCard10"></div>
+
+    <script>
+        class Planet {
+            constructor(name, funFact) {
+                this.name = name;
+                this.funFact = funFact;
+            }
+        }
+
+        function showPlanets() {
+            const planets = [
+                new Planet("Mercury", "Mercury is the closest planet to the Sun."),
+                new Planet("Venus", "Venus has a thick atmosphere that traps heat."),
+                new Planet("Earth", "Earth is the only planet known to support life."),
+                new Planet("Mars", "Mars is known as the Red Planet due to its reddish appearance."),
+                new Planet("Jupiter", "Jupiter is the largest planet in our solar system."),
+                new Planet("Saturn", "Saturn is famous for its beautiful rings."),
+                new Planet("Uranus", "Uranus rotates on its side, making it unique among planets."),
+                new Planet("Neptune", "Neptune has the strongest winds in the solar system."),
+                new Planet("Pluto", "Pluto was reclassified as a dwarf planet in 2006."),
+                new Planet("Ceres", "Ceres is the largest object in the asteroid belt between Mars and Jupiter.")
+            ];
+
+            document.getElementById('planetCard1').innerHTML = `<h2>${planets[0].name}</h2><p>${planets[0].funFact}</p>`;
+            document.getElementById('planetCard2').innerHTML = `<h2>${planets[1].name}</h2><p>${planets[1].funFact}</p>`;
+            document.getElementById('planetCard3').innerHTML = `<h2>${planets[2].name}</h2><p>${planets[2].funFact}</p>`;
+            document.getElementById('planetCard4').innerHTML = `<h2>${planets[3].name}</h2><p>${planets[3].funFact}</p>`;
+            document.getElementById('planetCard5').innerHTML = `<h2>${planets[4].name}</h2><p>${planets[4].funFact}</p>`;
+            document.getElementById('planetCard6').innerHTML = `<h2>${planets[5].name}</h2><p>${planets[5].funFact}</p>`;
+            document.getElementById('planetCard7').innerHTML = `<h2>${planets[6].name}</h2><p>${planets[6].funFact}</p>`;
+            document.getElementById('planetCard8').innerHTML = `<h2>${planets[7].name}</h2><p>${planets[7].funFact}</p>`;
+            document.getElementById('planetCard9').innerHTML = `<h2>${planets[8].name}</h2><p>${planets[8].funFact}</p>`;
+            document.getElementById('planetCard10').innerHTML = `<h2>${planets[9].name}</h2><p>${planets[9].funFact}</p>`;
+        }
+    </script>
+</body>
+</html>
